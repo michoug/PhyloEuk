@@ -54,5 +54,6 @@ done
 
 cd ../../..
 
-perl concatenateFastaReferenceMAGs.pl MAGs/BuscoGenes/concatGenes/align listReference.txt listMAGs.txt
+perl scripts/concatenateFastaReferenceMAGs.pl MAGs/BuscoGenes/concatGenes/align listReference.txt listMAGs.txt
+
 

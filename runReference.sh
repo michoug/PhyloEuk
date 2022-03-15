@@ -51,7 +51,7 @@ cd concatGenes
 mkdir align
 
 for i in *faa
-   do mafft --auto --thread 8 $i > align/${i%.faa}\_align.faa --quiet
+   do mafft --auto --quiet --thread 8 $i > align/${i%.faa}\_align.faa
 done
 
 for i in align/*align.faa
@@ -60,7 +60,7 @@ done
  
 cd ../../..
 
-perl concatenateFastaReference.pl reference/BuscoGenes/concatGenes/align listReference.txt
+perl scripts/concatenateFastaReference.pl reference/BuscoGenes/concatGenes/align listReference.txt
 
 ## Check to see if all the sequences have the same size
 

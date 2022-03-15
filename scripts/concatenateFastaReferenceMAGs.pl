@@ -77,8 +77,10 @@ open FILEOUT, ">", $fileout;
 
 for my $j (keys %finalhash){
 	if($j =~ /ENSEMBLE/){
+		my $count = $finalhash{$j} =~ tr/-//;
+		next if $count == length($finalhash{$j});
+		#print $count."\n";
 		print FILEOUT ">$j\n$finalhash{$j}\n";
 	}
-	# if $j =~ /ENSEMBLE/;
 }
 close FILEOUT;

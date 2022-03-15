@@ -32,7 +32,7 @@ while (my $file = readdir DIR) {
 	my @ids      = $db->get_all_primary_ids;
 
 	my $length   = $db->length($ids[0]);
-	#print "$length\n";
+	# print "$length\n";
 
 	for my $i (@ids){
 		my $j = $i;
